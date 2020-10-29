@@ -15,19 +15,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
     //metodo para los botones de navegacion de los activitys :v
     public void Ingreso (View view){
         Intent ingreso = new Intent(this, Ingresos.class);
         startActivity(ingreso);
     }
 
-
-    /*
     public void Gasto (View view){
-
+        Intent gasto = new Intent(this,Gastos.class);
+        startActivity(gasto);
     }
 
-     */
+    public void Movimientos (View view){
+        Intent movimiento = new Intent(this,Movimientos.class);
+        startActivity(movimiento);
+    }
+
+
+
 
 
 

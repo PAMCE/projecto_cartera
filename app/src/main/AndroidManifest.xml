@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ingresos"></activity>
+        <activity android:name=".Movimientos"></activity>
+        <activity android:name=".Gastos" />
+        <activity android:name=".Ingresos" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
