@@ -5,13 +5,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
 
 public class Ingresos extends AppCompatActivity {
+
+    public EditText edt_n1;
+    public Spinner spinner1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingresos);
+
+        //comunicacion con el spinner
+        spinner1 = (Spinner)findViewById(R.id.spinazo);
+
+        String [] Tipos_ingreso = {"Ingreso activo","Ingreso pasivo"};
+
+        ArrayAdapter <String> adapter = new ArrayAdapter<>(this,R.layout.spinner_item_spinners,Tipos_ingreso);
+        spinner1.setAdapter(adapter);
     }
 
 
