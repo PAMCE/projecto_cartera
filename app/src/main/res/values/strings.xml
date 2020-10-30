@@ -5,6 +5,7 @@
     <string name="btn_Ingreso">Ingresos</string>
     <string name="btn_Gasto">Gastos</string>
     <string name="btn_movimientos">Movimientos</string>
+    <string name="btn_inicio">Inicio</string>
 
     <string name="tv1">Mi Cartera App</string>
     <string name="tv2">Balance mensual + remanentes</string>
