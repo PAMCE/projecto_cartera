@@ -13,5 +13,10 @@
     <string name="tv4">Saldo anterior</string>
     <string name="tv5">Gasto</string>
     <string name="tv6">Saldo actual</string>
+    <string name="tv7">Ingresos</string>
+    <string name="tv8">Gastos</string>
+    <string name="tv9">Movimientos</string>
+
+
 
 </resources>
