@@ -11,7 +11,7 @@ import android.widget.Spinner;
 
 public class Ingresos extends AppCompatActivity {
 
-    public EditText edt_n1;
+    public EditText edt_n1,edt_txt1;
     public Spinner spinner1;
 
     @Override
@@ -27,6 +27,23 @@ public class Ingresos extends AppCompatActivity {
         ArrayAdapter <String> adapter = new ArrayAdapter<>(this,R.layout.spinner_item_spinners,Tipos_ingreso);
         spinner1.setAdapter(adapter);
     }
+
+
+
+
+   //metodo para el boton de guardar fecha
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
