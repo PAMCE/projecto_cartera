@@ -7,11 +7,21 @@
     tools:context=".Gastos">
 
     <Button
+        android:id="@+id/btnhora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Hora"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnfecha" />
+
+    <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="568dp"
+        android:layout_marginTop="580dp"
         android:onClick="Ingreso"
         android:text="@string/btn_Ingreso"
         app:layout_constraintStart_toEndOf="@+id/button7"
@@ -22,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="568dp"
+        android:layout_marginTop="580dp"
         android:onClick="Inicio"
         android:text="@string/btn_inicio"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="568dp"
+        android:layout_marginTop="580dp"
         android:onClick="Movimientos"
         android:text="@string/btn_movimientos"
         app:layout_constraintStart_toEndOf="@+id/button8"
@@ -89,9 +99,43 @@
         android:id="@+id/button14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="512dp"
         android:text="@string/btn_guardar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnfecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="364dp"
+        android:text="Fecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="Ingresa la fecha"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/btnfecha"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+    <EditText
+        android:id="@+id/edt_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Ingresa la hora"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/btnhora"
+        app:layout_constraintTop_toBottomOf="@+id/edt_fecha" />
 </androidx.constraintlayout.widget.ConstraintLayout>
