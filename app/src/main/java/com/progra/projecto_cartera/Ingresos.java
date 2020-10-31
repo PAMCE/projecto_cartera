@@ -19,7 +19,7 @@ import java.util.Calendar;
 public class Ingresos extends AppCompatActivity implements View.OnClickListener {
 
     public EditText edt_n1,edt_txt1, edt_fecha, edt_hora;
-    public Spinner spinner1;
+    private Spinner spinner1;
     private int dia,mes,año,hora,minutos;
     Button bfecha,bhora;
 
@@ -53,13 +53,13 @@ public class Ingresos extends AppCompatActivity implements View.OnClickListener 
         if(v == bfecha){
             final Calendar c= Calendar.getInstance();
             dia = c.get(Calendar.DAY_OF_MONTH);
-            mes = c.get(Calendar.MONTH);
+            //mes = c.get(Calendar.MONTH);
             año = c.get(Calendar.YEAR);
 
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                    edt_fecha.setText(dayOfMonth + "/" + (month+1) + "/" + year);
+                    edt_fecha.setText(dayOfMonth +  "/" + year);
                 }
             }
                     ,dia,mes,año);

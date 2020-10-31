@@ -18,8 +18,8 @@ import java.util.Calendar;
 
 public class Gastos extends AppCompatActivity implements View.OnClickListener {
 
-    public Spinner spinner2;
-    public EditText edt_n1, edt_fecha, edt_hora;
+    private Spinner spinner2;
+    private EditText edt_n1, edt_fecha, edt_hora;
     private int dia,mes,año,hora,minutos;
     Button bfecha,bhora;
 
@@ -49,6 +49,8 @@ public class Gastos extends AppCompatActivity implements View.OnClickListener {
     }
 
 
+    //metodo de los botones de fecha y hora
+
     @Override
     public void onClick(View v) {
         if(v == bfecha){
@@ -60,7 +62,7 @@ public class Gastos extends AppCompatActivity implements View.OnClickListener {
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                    edt_fecha.setText(dayOfMonth + "/" + (month+1) + "/" + year);
+                    edt_fecha.setText(dayOfMonth + "/" + year);
                 }
             }
                     ,dia,mes,año);
