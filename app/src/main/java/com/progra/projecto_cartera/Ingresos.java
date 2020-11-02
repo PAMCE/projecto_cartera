@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -13,13 +15,15 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
+import java.sql.Struct;
 import java.util.Calendar;
 
 public class Ingresos extends AppCompatActivity implements View.OnClickListener {
 
     public EditText edt_n1,edt_txt1, edt_fecha, edt_hora;
-    private Spinner spinner1;
+    private Spinner spinner1, spinner2;
     private int dia,mes,año,hora,minutos;
     Button bfecha,bhora;
 
@@ -36,14 +40,48 @@ public class Ingresos extends AppCompatActivity implements View.OnClickListener 
         bfecha.setOnClickListener(this);
         bhora.setOnClickListener(this);
 
+
+        //comunicacion con la parte grafica
+        edt_n1 = (EditText)findViewById(R.id.edt_cantidad);
+        edt_txt1 = (EditText)findViewById(R.id.edt_descripcion_);
+
+
+
+
         //comunicacion con el spinner
         spinner1 = (Spinner)findViewById(R.id.spinazo);
+
 
         String [] Tipos_ingreso = {"Ingreso activo","Ingreso pasivo"};
 
         ArrayAdapter <String> adapter = new ArrayAdapter<>(this,R.layout.spinner_item_spinners,Tipos_ingreso);
         spinner1.setAdapter(adapter);
+
     }
+
+
+
+    //metodo para dar de alta los ingresos
+    public void Guardar(View view){
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,7 +97,7 @@ public class Ingresos extends AppCompatActivity implements View.OnClickListener 
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                    edt_fecha.setText(dayOfMonth +  "/" + year);
+                    edt_fecha.setText(dayOfMonth + "/" +(month+1) +"/" + year);
                 }
             }
                     ,dia,mes,año);
